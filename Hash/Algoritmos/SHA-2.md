@@ -22,7 +22,7 @@ SHA-2 no es un algoritmo, sino una familia de funciones hash creadas por la NSA 
 
 
 ## 1. Descripción general de SHA2
-Todas las funciones tienen como **estructura** un [esquema de Merkle-Damgård](../Conceptos/Esquema Merkle-Damgård.md) y siguen una estructura similar.
+Todas las funciones tienen como **estructura** un [esquema de Merkle-Damgård](../Conceptos/Esquema%20Merkle-Damgård.md) y siguen una estructura similar.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────────────┐

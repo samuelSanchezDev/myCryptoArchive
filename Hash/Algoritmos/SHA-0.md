@@ -4,7 +4,7 @@
 - **Nombre:** Secure Hash Algorithms (Posteriormente renombrada como Secure Hash Algorithms 0)
 - **Tipo:** Función hash.
 - **Digest:** 160 bits.
-- **Estructura:** [Esquema de Merkle-Damgård](../Conceptos/Esquema Merkle-Damgård.md)
+- **Estructura:** [Esquema de Merkle-Damgård](../Conceptos/Esquema%20Merkle-Damgård.md)
     - **Tamaño de bloque:** 512 bits.
     - **Número de rondas:** 80 (En 4 bucles de 20 iteraciones).
 - **Creador:** La NSA (National Security Agency)

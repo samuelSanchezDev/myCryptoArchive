@@ -4,7 +4,7 @@
 - **Nombre:** Message-Digest Algorithm 4
 - **Tipo:** Función hash.
 - **Digest:** 128 bits.
-- **Estructura:** [Esquema de Merkle-Damgård](../Conceptos/Esquema Merkle-Damgård.md)
+- **Estructura:** [Esquema de Merkle-Damgård](../Conceptos/Esquema%20Merkle-Damgård.md)
     - **Tamaño de bloque:** 512 bits.
     - **Número de rondas:** 48 (3 bucles de 16 iteraciones).
 - **Creador:** Ronald Rivest

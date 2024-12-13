@@ -4,7 +4,7 @@
 - **Nombre:** Message-Digest Algorithm 5.
 - **Tipo:** Función hash.
 - **Digest:** 128 bits.
-- **Estructura:** [Esquema de Merkle-Damgård](../Conceptos/Esquema Merkle-Damgård.md) (Es una mejora del algoritmo [MD4](MD4.md))
+- **Estructura:** [Esquema de Merkle-Damgård](../Conceptos/Esquema%20Merkle-Damgård.md) (Es una mejora del algoritmo [MD4](MD4.md))
     - **Tamaño de bloque:** 512 bits.
     - **Número de rondas:** 64 (4 bucles con 16 iteraciones).
 - **Creador:** Ronald Rivest
