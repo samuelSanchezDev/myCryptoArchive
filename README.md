@@ -1,6 +1,6 @@
 # README
 
-- [Funciones hash](Hash/Index.md)
+- [Funciones hash](Hash/README.md)
 
 ## TODO
 - DES

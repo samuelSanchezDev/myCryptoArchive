@@ -1,4 +1,4 @@
-# Index
+# README
 
 ## ¿Qué es una función hash?
 Una función hash es cualquier función que permita asignar a entradas de un tamaño variable una salida de tamaño fijo (esto último es discutible debido a que existen algunas funciones hash de salida variable).
@@ -30,4 +30,4 @@ En las últimas 3 propiedades, el que sea complicado de calcular significa que n
 | [SHA-512/256 (SHA-2)](Algoritmos/SHA-2.md) | 256 bits | 2008 |
 
 ## Conceptos relacionados con las funciones hash.
-- [Esquema Merkle-Damgård](Conceptos/Esquema Merkle-Damgård.md). Se trata de una estructura que se usa habitualmente para construir funciones hash. Algunas funciones hash que tienen esta estructura son [MD5](Algoritmos/MD5.md), [SHA-1](Algoritmos/SHA-1.md) o [SHA-2](Algoritmos/SHA-2.md)
+- [Esquema Merkle-Damgård](Conceptos/Esquema%20Merkle-Damgård.md). Se trata de una estructura que se usa habitualmente para construir funciones hash. Algunas funciones hash que tienen esta estructura son [MD5](Algoritmos/MD5.md), [SHA-1](Algoritmos/SHA-1.md) o [SHA-2](Algoritmos/SHA-2.md)
