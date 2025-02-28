@@ -38,7 +38,7 @@ La función se compone de tres etapas:
 └─────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 1.1 Preprocesamiento del mensaje.
+### 1.1 Preprocesamiento del mensaje
 La cadena original se expande añadiendo un bit `0b1` seguido de tantos `0b0` hasta que su tamaño en bytes sea congruente con 56 (448 bits) en módulo 64 (512 bits, tamaño de bloque).
 
 > (message + pading) = 56 mod 64

@@ -42,7 +42,7 @@ Todas las funciones tienen como **estructura** un [esquema de Merkle-Damgård](.
 
 Las funciones se componen de tres partes:
 
-### 1 **Preprocesamiento del mensaje.**
+### 1 Preprocesamiento del mensaje
 
 El mensaje se expande hasta que sea congruente con el tamaño de bloque. Esta expansión se realiza añadiendo un bit `0b1` seguido de tantos `0b0` hasta que su tamaño en bytes sea congruente con un tamaño **X** (diferente según la función) y en el bloque restante se almacena el tamaño de la cadena original en bits.
 
@@ -57,13 +57,13 @@ El tamaño se concatena en formato Big-Endian.
 └───────────────────────────────────────────────────────────┘
 ```
 
-### 2 **Función de compresión.**
+### 2 Función de compresión
 
 Esta función toma como argumentos **un bloque (M)** de 16 palabras y **un buffer** de 8 palabras identificadas con las letras de la **A** a la **H** que es el resultado de la función de compresión anterior (para la primera iteración hay constantes predefinidas).
 
 La función de compresión consiste en la preparación del bloque y **N** rondas (iteraciones) para mezclar. El buffer no se modifica hasta el final de la función, durante la misma se opera una copia del mismo.
 
-#### 2.1 **La preparación del bloque**
+#### 2.1 La preparación del bloque
 
 La preparación del bloque consiste en extenderlo de **16 palabras** hasta **N palabras**, estando identificadas por **W**. De forma que en cada iteración (**i**) se use una palabra (**W<sub>i</sub>**) del mismo. Se realiza de la siguiente forma:
 - Para las palabras 0 y 15
@@ -71,7 +71,7 @@ La preparación del bloque consiste en extenderlo de **16 palabras** hasta **N p
 - Para las palabras 16 y **N-1**
     - **W<sub>i</sub> = sigma<sub>1</sub>(W<sub>i-2</sub>) + W<sub>i-7</sub> + sigma<sub>0</sub>(W<sub>i-15</sub>) + W<sub>i-16</sub>**.
 
-#### 2.2 **Bucle de compresión.**
+#### 2.2 Bucle de compresión
 
 En cada iteración (**i**) se realiza la siguientes operaciones (cada iteración de bucle tiene asignada una constante **K** diferente según la función **SHA2**):
 - **T<sub>1</sub> = H + SIGMA<sub>1</sub>(E) + Ch(e, f, g) + K<sub>i</sub> + W<sub>i</sub>**
@@ -134,7 +134,7 @@ Al final, el buffer modificado se le suma al buffer original.
 - **G0 = G0 + G**
 - **H0 = H0 + H**
 
-### 3. **Calculo de la salida.**
+### 3. Calculo de la salida
 La salida se calcula concatenando las palabras del buffer empezando por el byte de mayor peso de A y acabando un byte diferente dependiendo de la función SHA2.
 
 ```
@@ -163,7 +163,7 @@ Ambas funciones son muy similares ya que SHA-224 se derivo a partir de SHA-256. 
 - **sigma<sub>0</sub>(X) = ROTR<sup>7</sup>(X) xor ROTR<sup>18</sup>(X) xor SHR<sup>3</sup>(X)**
 - **sigma<sub>1</sub>(X) = ROTR<sup>17</sup>(X) xor ROTR<sup>19</sup>(X) xor SHR<sup>10</sup>(X)**
 
-### 2.1 Preprocesamiento del mensaje.
+### 2.1 Preprocesamiento del mensaje
 La cadena original se expande añadiendo un bit `0b1` seguido de tantos `0b0` hasta que su tamaño en bytes sea congruente con 56 (448 bits) en módulo 64 (512 bits, tamaño de bloque).
 
 > (message + pading) = 56 mod 64
@@ -172,7 +172,7 @@ El primer bit se añade incluso si el tamaño original es congruente. En los 8 b
 
 El tamaño se concatena en formato Big-Endian.
 
-### 2.2 Función de compresión.
+### 2.2 Función de compresión
 Los valores iniciales del buffer son:
 
 
@@ -215,7 +215,7 @@ Entre SHA-384 y SHA-512 unicamente difiere el buffer inicial y en el calculo de 
 - **sigma<sub>0</sub>(X) = ROTR<sup>1</sup>(X) xor ROTR<sup>8</sup>(X) xor SHR<sup>7</sup>(X)**
 - **sigma<sub>1</sub>(X) = ROTR<sup>19</sup>(X) xor ROTR<sup>61</sup>(X) xor SHR<sup>6</sup>(X)**
 
-### 3.1 Preprocesamiento del mensaje.
+### 3.1 Preprocesamiento del mensaje
 La cadena original se expande añadiendo un bit `0b1` seguido de tantos `0b0` hasta que su tamaño en bytes sea congruente con 112 (896 bits) en módulo 128 (1024 bits, tamaño de bloque).
 
 > (message + pading) = 112 mod 128
@@ -225,7 +225,7 @@ El primer bit se añade incluso si el tamaño original es congruente. En los 16 
 El tamaño se concatena en formato Big-Endian.
 
 
-### 3.2 Función de compresión.
+### 3.2 Función de compresión
 Los valores iniciales del buffer son:
 
 | Buffer | SHA384               | SHA512               |
@@ -308,6 +308,6 @@ Los buffer de SHA-512/224 y SHA-512/256 son:
 |   G    | `0x3F9D85A86A1D36C8` | `0X2B0199FC2C85B8AA` |
 |   H    | `0x1112E6AD91D692A1` | `0X0EB72DDC81C52CA2` |
 
-### 4.2 Calculo de la salida.
+### 4.2 Calculo de la salida
 El digest son los *t* bits más a izquierda que hay al concatenar las palabras A, B, C, D, E, F, G y H del buffer.
 

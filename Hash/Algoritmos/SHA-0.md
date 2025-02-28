@@ -40,7 +40,7 @@ Se compone de tres partes:
 └─────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 1.1 Preprocesamiento del mensaje.
+### 1.1 Preprocesamiento del mensaje
 La cadena original se expande añadiendo un bit `0b1` seguido de tantos `0b0` hasta que su tamaño en bytes sea congruente con 56 (448 bits) en módulo 64 (512 bits).
 
 > (message + pading) = 56 mod 64
@@ -58,7 +58,7 @@ El tamaño se concatena en formato Big-Endian.
 └───────────────────────────────────────────────────────────┘
 ```
 
-### 1.2 Función de compresión.
+### 1.2 Función de compresión
 Esta función toma como argumentos **un bloque (M**) de 512 bits (16 palabras) de la cadena y **un buffer** de 160 bits (5 palabras identificadas con las letras de la **A** a la **E**) que es el resultado de la función de compresión anterior. Cuando se esta procesando el primer bloque, el buffer toma los valores de:
 - **A** = `0x67452301`
 - **B** = `0xEFCDAB89`
@@ -76,7 +76,7 @@ La preparación del bloque consiste en extenderlo de 512 bits (16 palabras) hast
 - Entre las palabras 16 y 79
     - **W<sub>i</sub> = W<sub>i-3</sub> xor W<sub>i-8</sub> xor W<sub>i-14</sub> xor W<sub>i-16</sub>**.
 
-#### 1.2.2 Bucle de compresión.
+#### 1.2.2 Bucle de compresión
 Cada bucle (identificado por la variable **t**) tiene asignado una variable **K** y una función **F** que mezcla las palabras **B**, **C** y **D** del buffer.
 - **Bucle 1**. Iteraciones 00-19:
 	- **K** = `0x5A827999`

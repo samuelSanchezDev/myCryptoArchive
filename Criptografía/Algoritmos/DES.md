@@ -71,7 +71,7 @@ Se trata de una [red de Feistel balanceada](../Conceptos/Red Feistel.md) de 16 r
 ```
 
 
-##### 1.1.1 Permutación inicial (IP).
+##### 1.1.1 Permutación inicial (IP)
 
 | Iteración |  00 |  01 |  02 |  03 |  04 |  05 |  06 |  07 |  08 |  09 |  0A |  0B |  0C |  0D |  0E |  0F |
 | --------: | --: | --: | --: | --: | --: | --: | --: | --: | --: | --: | --: | --: | --: | --: | --: | --: |
@@ -80,7 +80,7 @@ Se trata de una [red de Feistel balanceada](../Conceptos/Red Feistel.md) de 16 r
 |      0x20 |  56 |  48 |  40 |  32 |  24 |  16 |  08 |  00 |  58 |  50 |  42 |  34 |  26 |  18 |  10 |  02 |
 |      0x30 |  60 |  52 |  44 |  36 |  28 |  20 |  12 |  04 |  62 |  54 |  46 |  38 |  30 |  22 |  14 |  06 |
 
-##### 1.1.2 Permutación final (FP).
+##### 1.1.2 Permutación final (FP)
 
 | Iteración | 0x00 |  01 |  02 |  03 |  04 |  05 |  06 |  07 |  08 |  09 |  0A |  0B |  0C |  0D |  0E |  0F |
 | --------: | ---: | --: | --: | --: | --: | --: | --: | --: | --: | --: | --: | --: | --: | --: | --: | --: |
@@ -90,7 +90,7 @@ Se trata de una [red de Feistel balanceada](../Conceptos/Red Feistel.md) de 16 r
 |      0x30 |   33 |  01 |  41 |  09 |  49 |  17 |  57 |  25 |  32 |  00 |  40 |  08 |  48 |  16 |  56 |  24 |
 
 
-### 1.2 Generación de subclaves (F).
+### 1.2 Generación de subclaves
 La generación de subclaves consiste en:
 1. Una permutación inicial que reduce la clave de 64 a 56 bits y que sirve como control de paridad (impar).
 2. 16 iteraciones consistentes en:
@@ -214,7 +214,7 @@ La función F tiene como argumentos el medio bloque de 32 bits que se expande ha
 |  06 |  23 |  24 |  25 |  26 |  27 |  28 |
 |  07 |  27 |  28 |  29 |  30 |  31 |   0 |
 
-#### 1.3.2 Cajas de sustitución.
+#### 1.3.2 Cajas de sustitución
 
 |   S1   | x0000x | x0001x | x0010x | x0011x | x0100x | x0101x | x0110x | x0111x | x1000x | x1001x | x1010x | x1011x | x1100x | x1101x | x1110x | x1111x |
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
